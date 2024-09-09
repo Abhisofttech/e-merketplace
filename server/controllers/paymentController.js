@@ -25,7 +25,7 @@ export const createCheckoutSession = async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `${frontendURL}/buyer-dashboard/payment/order-confirmation`,
+      success_url: `https://e-merketplace-frontend.onrender.com/buyer-dashboard/payment/order-confirmation`,
       cancel_url: `${frontendURL}/`,
     });
 
