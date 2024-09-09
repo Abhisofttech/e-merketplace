@@ -2,7 +2,7 @@ import Stripe from 'stripe';
 
 
 const stripeSecretKey =process.env.STRIPE_SECRET_KEY
-const frontendURL ='https://e-merketplace-frontend.onrender.com/buyer-dashboard/payment'
+const frontendURL =process.env.FRONTEND_URL
 const stripe = Stripe(stripeSecretKey);
 
 export const createCheckoutSession = async (req, res) => {
@@ -25,8 +25,8 @@ export const createCheckoutSession = async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `${frontendURL}/order-confirmation`,
-      cancel_url: `${frontendURL}/place-order`,
+      success_url: `${frontendURL}/buyer-dashboard/payment/order-confirmation`,
+      cancel_url: `${frontendURL}/`,
     });
 
   
