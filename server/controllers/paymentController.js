@@ -2,7 +2,7 @@ import Stripe from 'stripe';
 
 
 const stripeSecretKey =process.env.STRIPE_SECRET_KEY
-const frontendURL ='http://localhost:5173/buyer-dashboard/payment'
+const frontendURL ='https://e-merketplace-frontend.onrender.com/buyer-dashboard/payment'
 const stripe = Stripe(stripeSecretKey);
 
 export const createCheckoutSession = async (req, res) => {
