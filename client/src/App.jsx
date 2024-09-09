@@ -28,9 +28,11 @@ import CustomReports from './components/AdminDashboard/CustomReports.jsx';
 import InventoryManagement from './components/AdminDashboard/InventoryManagement.jsx';
 import AdminHome from './pages/AdminHome.jsx';
 import SellerHome from './pages/SellerHome.jsx';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
   return (
+    <GoogleOAuthProvider clientId='640690664880-f8or2avseqp4pnj9voftboiotuju01vr.apps.googleusercontent.com'>
     <Router>
       <ToastContainer />
 
@@ -74,6 +76,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    </GoogleOAuthProvider>
   );
 }
 
